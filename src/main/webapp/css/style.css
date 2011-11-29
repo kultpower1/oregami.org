@@ -1,0 +1,39 @@
+@CHARSET "UTF-8";
+
+
+body, td, span, p {
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+td {
+	vertical-align: top;	
+}
+
+.veroeffentlichungsgruppe {
+	border-radius: 5px;
+	background-color:#f4f4ff;
+	margin-bottom: 10px;
+	padding: 3px;
+	vertical-align: top;
+}
+
+table.veroeffentlichung {
+	background-color:#eeeeee;
+	border: 0px dotted #555555;
+}
+
+table.veroeffentlichung td{
+	font-size:8pt;
+}
+
+.spiel_header {
+	font-size:16pt;
+	color: #3333aa;
+}
+
+.spiel_subtitle {
+	font-size: 10pt; 
+	font-style: italic;
+}
+
