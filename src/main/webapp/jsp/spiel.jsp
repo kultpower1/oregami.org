@@ -8,7 +8,7 @@
 </head>
 
 <body>
-	<span class="game_header">${actionBean.loadedGame.mainTitle}</span>
+	<span class="game_header">${actionBean.loadedGame.mainTitle}</span> <span style="font-size:60%;">${actionBean.loadedGame.description}</span>
 	<br/>
 		<span class="game_subtitle">
 			<c:forEach items="${actionBean.loadedGame.title}" var="title" varStatus="status">
