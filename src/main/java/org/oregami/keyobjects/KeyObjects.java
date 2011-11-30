@@ -1,6 +1,6 @@
 package org.oregami.keyobjects;
 
-public class Schluessel {
+public class KeyObjects {
 	
 	public enum SystemKey {Amiga, C64, MSDOS, AtariST, AppleMacintosh, SonyPlaystation, NintendoWii, NintendoGamecube, SegaSaturn, Windows};
 	public enum DistributionKey {RegularBox};

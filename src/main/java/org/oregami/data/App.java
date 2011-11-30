@@ -14,12 +14,12 @@ import org.oregami.entities.Release;
 import org.oregami.entities.ReleaseGroup;
 import org.oregami.entities.Title;
 import org.oregami.entities.User;
-import org.oregami.keyobjects.Schluessel.CountryKey;
-import org.oregami.keyobjects.Schluessel.DistributionKey;
-import org.oregami.keyobjects.Schluessel.LanguageKey;
-import org.oregami.keyobjects.Schluessel.ReleaseGroupType;
-import org.oregami.keyobjects.Schluessel.RoleKey;
-import org.oregami.keyobjects.Schluessel.SystemKey;
+import org.oregami.keyobjects.KeyObjects.CountryKey;
+import org.oregami.keyobjects.KeyObjects.DistributionKey;
+import org.oregami.keyobjects.KeyObjects.LanguageKey;
+import org.oregami.keyobjects.KeyObjects.ReleaseGroupType;
+import org.oregami.keyobjects.KeyObjects.RoleKey;
+import org.oregami.keyobjects.KeyObjects.SystemKey;
 
 
 /**

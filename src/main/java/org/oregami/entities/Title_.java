@@ -3,7 +3,7 @@ package org.oregami.entities;
 import javax.annotation.Generated;
 import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
-import org.oregami.keyobjects.Schluessel.LanguageKey;
+import org.oregami.keyobjects.KeyObjects.LanguageKey;
 
 @Generated(value="Dali", date="2011-11-29T19:58:28.464+0100")
 @StaticMetamodel(Title.class)

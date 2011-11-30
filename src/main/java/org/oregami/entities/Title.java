@@ -5,7 +5,7 @@ import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.ManyToOne;
 
-import org.oregami.keyobjects.Schluessel.LanguageKey;
+import org.oregami.keyobjects.KeyObjects.LanguageKey;
 
 
 @Entity

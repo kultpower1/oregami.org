@@ -8,7 +8,7 @@ import javax.persistence.Column;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 
-import org.oregami.keyobjects.Schluessel.RoleKey;
+import org.oregami.keyobjects.KeyObjects.RoleKey;
 
 @Entity
 public class User extends BaseEntity {

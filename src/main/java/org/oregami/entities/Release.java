@@ -12,7 +12,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.OrderBy;
 import javax.persistence.Table;
 
-import org.oregami.keyobjects.Schluessel.DistributionKey;
+import org.oregami.keyobjects.KeyObjects.DistributionKey;
 
 
 @Entity

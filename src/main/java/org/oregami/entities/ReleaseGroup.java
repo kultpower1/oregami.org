@@ -11,8 +11,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OrderBy;
 
-import org.oregami.keyobjects.Schluessel.SystemKey;
-import org.oregami.keyobjects.Schluessel.ReleaseGroupType;
+import org.oregami.keyobjects.KeyObjects.SystemKey;
+import org.oregami.keyobjects.KeyObjects.ReleaseGroupType;
 
 
 @Entity
