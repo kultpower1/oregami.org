@@ -3,7 +3,7 @@ package org.oregami.keyobjects;
 public class Schluessel {
 	
 	public enum SystemKey {Amiga, C64, MSDOS, AtariST, AppleMacintosh, SonyPlaystation, NintendoWii, NintendoGamecube, SegaSaturn, Windows};
-	public enum DistributionKey {NormalePackung};
+	public enum DistributionKey {RegularBox};
 	public enum LanguageKey {DE, EN};
 	
 	public enum CountryKey {
@@ -11,7 +11,7 @@ public class Schluessel {
 	};
 	
 	public enum ReleaseGroupType {
-		Originalversion, VerbesserteOriginalversion, Demoversion, Remake
+		Original, Enhanced, Demo, Remake
 	};
 	
 	public enum x {a, b};

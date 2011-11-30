@@ -80,14 +80,14 @@ public class App
         
 
         ReleaseGroup vogDos = new ReleaseGroup(
-        		"DOS (Originalversion)", 
+        		"DOS (Original)", 
         		SystemKey.MSDOS, 
-        		ReleaseGroupType.Originalversion);
-        Release voMsdos1_1 = new Release("Veröffentlichung 1-1 (PC, 5,25, DV, 256 Farben)", DistributionKey.NormalePackung);
+        		ReleaseGroupType.Original);
+        Release voMsdos1_1 = new Release("Veröffentlichung 1-1 (PC, 5,25, DV, 256 Farben)", DistributionKey.RegularBox);
         voMsdos1_1.addCountryRelease(new CountryRelease(CountryKey.Deutschland, 1990));
         vogDos.addRelease(voMsdos1_1);
         
-        Release voMsdos1_11 = new Release("Veröffentlichung 1-11 (PC, CD, EU, 256 Farben)", DistributionKey.NormalePackung);
+        Release voMsdos1_11 = new Release("Veröffentlichung 1-11 (PC, CD, EU, 256 Farben)", DistributionKey.RegularBox);
         voMsdos1_11.addCountryRelease(new CountryRelease(CountryKey.Deutschland, 9999));
         voMsdos1_11.addCountryRelease(new CountryRelease(CountryKey.Frankreich, 9999));
         voMsdos1_11.addCountryRelease(new CountryRelease(CountryKey.Italien, 9999));
@@ -100,12 +100,12 @@ public class App
         ReleaseGroup vogDosDemo = new ReleaseGroup(
         		"DOS (Demoversion)", 
         		SystemKey.MSDOS, 
-        		ReleaseGroupType.Demoversion); 
+        		ReleaseGroupType.Demo); 
         
         ReleaseGroup vogDosEnhanced = new ReleaseGroup(
         		"DOS (Verbesserte CD-Version)", 
         		SystemKey.MSDOS, 
-        		ReleaseGroupType.VerbesserteOriginalversion);         
+        		ReleaseGroupType.Enhanced);         
         
         spielMonkeyIsland.addReleaseGroup(vogDos);
         spielMonkeyIsland.addReleaseGroup(vogDosDemo);
@@ -114,15 +114,15 @@ public class App
         
         //########### Amiga
         ReleaseGroup vogAmiga = new ReleaseGroup(
-        		"Amiga 500/600 (OCS/ECS) (Originalversion)",
+        		"Amiga 500/600 (OCS/ECS) (Original)",
         		SystemKey.Amiga, 
-        		ReleaseGroupType.Originalversion);
+        		ReleaseGroupType.Original);
         
-        Release voAmiga4_1 = new Release("Veröffentlichung 4-1 (Amiga, 3,5, DV)", DistributionKey.NormalePackung);
+        Release voAmiga4_1 = new Release("Veröffentlichung 4-1 (Amiga, 3,5, DV)", DistributionKey.RegularBox);
         voAmiga4_1.addCountryRelease(new CountryRelease(CountryKey.Deutschland, 1991));
-        Release voAmiga4_2 = new Release("Veröffentlichung 4-2 (Amiga, 3,5, UK)", DistributionKey.NormalePackung);
+        Release voAmiga4_2 = new Release("Veröffentlichung 4-2 (Amiga, 3,5, UK)", DistributionKey.RegularBox);
         voAmiga4_2.addCountryRelease(new CountryRelease(CountryKey.UK, 1991));
-        Release voAmiga4_3 = new Release("Veröffentlichung 4-3 (Amiga, 3,5, UK Kixx)", DistributionKey.NormalePackung);
+        Release voAmiga4_3 = new Release("Veröffentlichung 4-3 (Amiga, 3,5, UK Kixx)", DistributionKey.RegularBox);
         voAmiga4_3.addCountryRelease(new CountryRelease(CountryKey.UK, 1994));
         
         vogAmiga.addRelease(voAmiga4_1);
@@ -132,7 +132,7 @@ public class App
         ReleaseGroup vogAmigaDemo = new ReleaseGroup(
         		"Amiga 500/600 (OCS/ECS) (Demoversion)",
         		SystemKey.Amiga, 
-        		ReleaseGroupType.Demoversion);
+        		ReleaseGroupType.Demo);
        
         spielMonkeyIsland.addReleaseGroup(vogAmiga);
         spielMonkeyIsland.addReleaseGroup(vogAmigaDemo);
@@ -141,15 +141,15 @@ public class App
         
         //########### Atari ST
         ReleaseGroup vogAtariST = new ReleaseGroup(
-        		"Atari ST (Originalversion)",
+        		"Atari ST (Original)",
         		SystemKey.AtariST, 
-        		ReleaseGroupType.Originalversion);
+        		ReleaseGroupType.Original);
         
-        Release voSt6_1 = new Release("Veröffentlichung 6-1 (Atari ST, 3,5, DV)", DistributionKey.NormalePackung);
+        Release voSt6_1 = new Release("Veröffentlichung 6-1 (Atari ST, 3,5, DV)", DistributionKey.RegularBox);
         voSt6_1.addCountryRelease(new CountryRelease(CountryKey.Deutschland, 1991));
-        Release voSt6_2 = new Release("Veröffentlichung 6-2 (Atari ST, 3,5, US)", DistributionKey.NormalePackung);
+        Release voSt6_2 = new Release("Veröffentlichung 6-2 (Atari ST, 3,5, US)", DistributionKey.RegularBox);
         voSt6_2.addCountryRelease(new CountryRelease(CountryKey.USA, 1991));
-        Release voSt6_3 = new Release("Veröffentlichung 6-3 (Atari ST, 3,5, UK)", DistributionKey.NormalePackung);
+        Release voSt6_3 = new Release("Veröffentlichung 6-3 (Atari ST, 3,5, UK)", DistributionKey.RegularBox);
         voSt6_3.addCountryRelease(new CountryRelease(CountryKey.UK, 1991));
 
         vogAtariST.addRelease(voSt6_1);
@@ -160,11 +160,11 @@ public class App
 
         //########### Apple
         ReleaseGroup vogApple = new ReleaseGroup(
-        		"Apple Macintosh (Originalversion)",
+        		"Apple Macintosh (Original)",
         		SystemKey.AppleMacintosh, 
-        		ReleaseGroupType.Originalversion);
+        		ReleaseGroupType.Original);
         
-        Release voApple7_1 = new Release("Veröffentlichung 7-1 (Apple Macintosh, 3,5, US)", DistributionKey.NormalePackung);
+        Release voApple7_1 = new Release("Veröffentlichung 7-1 (Apple Macintosh, 3,5, US)", DistributionKey.RegularBox);
         voApple7_1.addCountryRelease(new CountryRelease(CountryKey.USA, 1991));
         
         vogApple.addRelease(voApple7_1);
@@ -212,20 +212,20 @@ public class App
         
 
         ReleaseGroup vogPlaystation = new ReleaseGroup(
-        		"Playstation Originalversion", 
+        		"Playstation Original", 
         		SystemKey.SonyPlaystation, 
-        		ReleaseGroupType.Originalversion);
+        		ReleaseGroupType.Original);
         
-        Release voPs1_1 = new Release("Veröffentlichung 1-1 (PSX, CD, DV)", DistributionKey.NormalePackung);
+        Release voPs1_1 = new Release("Veröffentlichung 1-1 (PSX, CD, DV)", DistributionKey.RegularBox);
         voPs1_1.addCountryRelease(new CountryRelease(CountryKey.Deutschland, 1986));
         voPs1_1.addCountryRelease(new CountryRelease(CountryKey.Oesterreich, 1986));
         vogPlaystation.addRelease(voPs1_1);
         
-        Release voPs1_2 = new Release("Veröffentlichung 1-2 (PSX, CD, DV, White Label)", DistributionKey.NormalePackung);
+        Release voPs1_2 = new Release("Veröffentlichung 1-2 (PSX, CD, DV, White Label)", DistributionKey.RegularBox);
         voPs1_2.addCountryRelease(new CountryRelease(CountryKey.Deutschland, 9999));
         vogPlaystation.addRelease(voPs1_2);
         
-        Release voPs1_3 = new Release("Veröffentlichung 1-3 (PSX, CD, DV, Platinum Edition)", DistributionKey.NormalePackung);
+        Release voPs1_3 = new Release("Veröffentlichung 1-3 (PSX, CD, DV, Platinum Edition)", DistributionKey.RegularBox);
         voPs1_3.addCountryRelease(new CountryRelease(CountryKey.Deutschland, 9999));
         vogPlaystation.addRelease(voPs1_3);
         //

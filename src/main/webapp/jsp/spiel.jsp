@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
 <link rel="stylesheet" href="${contextPath}/css/style.css" />
-<title>Spiel-Anzeige</title>
+<title>Game: ${actionBean.loadedGame.mainTitle}</title>
 </head>
 
 <body>
