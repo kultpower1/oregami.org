@@ -11,36 +11,36 @@ import org.oregami.entities.Game;
 import org.oregami.util.BaseActionBean;
 
 
-@UrlBinding("/Spiel/{spielId=2}")
+@UrlBinding("/game/{gameId=2}")
 public class SpielActionBean extends BaseActionBean implements ActionBean {
 
-	private Game geladenesSpiel = null;
-	private String spielId;
+	private Game loadedGame = null;
+	private String gameId;
 	
 	public Resolution defaultHandler() {
 		
-		geladenesSpiel = SpielDAO.ladeSpiel(1);
-		if (geladenesSpiel==null) {
+		loadedGame = SpielDAO.ladeSpiel(1);
+		if (loadedGame==null) {
 			App.initMonkeyIsland();
 			App.initResidentEvil();
 			App.initUser();
 		}
 		
-		geladenesSpiel = SpielDAO.ladeSpiel(Integer.parseInt(spielId));
-		System.out.println("Geladen: " + geladenesSpiel.getMainTitle() + " (" + geladenesSpiel.getDescription() + ")");
+		loadedGame = SpielDAO.ladeSpiel(Integer.parseInt(gameId));
+		System.out.println("Geladen: " + loadedGame.getMainTitle() + " (" + loadedGame.getDescription() + ")");
 		return new ForwardResolution("/jsp/spiel.jsp");
 	}
 
 
-	public String getSpielId() {
-		return spielId;
+	public String getGameId() {
+		return gameId;
 	}
 
-	public void setSpielId(String spielId) {
-		this.spielId = spielId;
+	public void setGameId(String gameId) {
+		this.gameId = gameId;
 	}
 
-	public Game getGeladenesSpiel() {
-		return geladenesSpiel;
+	public Game getLoadedGame() {
+		return loadedGame;
 	}
 }

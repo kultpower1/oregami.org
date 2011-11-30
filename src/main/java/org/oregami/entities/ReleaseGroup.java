@@ -45,7 +45,7 @@ public class ReleaseGroup extends BaseEntity {
 	}
 	
 	
-	public SystemKey getSystemKey() {
+	public SystemKey getSystem() {
 		return system;
 	}
 
@@ -62,7 +62,7 @@ public class ReleaseGroup extends BaseEntity {
 		return releaseGroupType;
 	}
 
-	public String getBezeichnung() {
+	public String getName() {
 		return name;
 	}
 

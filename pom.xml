@@ -7,13 +7,13 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Oregami Webapp</name>
 
-	<distributionManagement>
-		<repository>
-			<id>Snapshots</id>
-			<name>Snapshots</name>
-			<url>http://localhost:8081/nexus/content/repositories/snapshots/</url>
-		</repository>
-	</distributionManagement>
+<!-- 	<distributionManagement> -->
+<!-- 		<repository> -->
+<!-- 			<id>Snapshots</id> -->
+<!-- 			<name>Snapshots</name> -->
+<!-- 			<url>http://localhost:8081/nexus/content/repositories/snapshots/</url> -->
+<!-- 		</repository> -->
+<!-- 	</distributionManagement> -->
 
 	<dependencies>
 
@@ -24,8 +24,6 @@
 		<!-- <scope>system</scope> -->
 		<!-- <systemPath>E:/appl/JavaSDK_16_e/lib/tools.jar</systemPath> -->
 		<!-- </dependency> -->
-
-
 
 		<dependency>
 			<groupId>net.sourceforge.stripes</groupId>

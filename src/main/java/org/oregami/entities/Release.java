@@ -25,7 +25,7 @@ public class Release extends BaseEntity {
 	private static final long serialVersionUID = 1L;
 
 	@Enumerated(EnumType.STRING)
-	private DistributionKey distributionKey;
+	private DistributionKey distribution;
 	
 	@ManyToOne
 	private ReleaseGroup releaseGroup;
@@ -34,13 +34,13 @@ public class Release extends BaseEntity {
 
 	@OneToMany(mappedBy = "release", cascade = CascadeType.ALL)
 	@OrderBy("yearOfRelease")
-	private Set<CountryRelease> countryRelease = new HashSet<CountryRelease>();
+	private Set<CountryRelease> countryReleaseList = new HashSet<CountryRelease>();
 	
 	public Release() {};
 	
-	public Release(String description, DistributionKey distributionKey) {
+	public Release(String description, DistributionKey distribution) {
 		this.description = description;
-		this.distributionKey = distributionKey;
+		this.distribution = distribution;
 	}
 	
 	public void setReleaseGroup(
@@ -49,12 +49,12 @@ public class Release extends BaseEntity {
 	}
 
 	public void addCountryRelease(CountryRelease countryRelease) {
-		this.countryRelease.add(countryRelease);
+		this.countryReleaseList.add(countryRelease);
 		countryRelease.setRelease(this);
 	}
 
-	public DistributionKey getChannelOfDistributionKey() {
-		return distributionKey;
+	public DistributionKey getDistribution() {
+		return distribution;
 	}
 
 	public String getDescription() {
@@ -62,7 +62,7 @@ public class Release extends BaseEntity {
 	}
 
 	public Set<CountryRelease> getCountryReleaseList() {
-		return countryRelease;
+		return countryReleaseList;
 	}
 	
 }

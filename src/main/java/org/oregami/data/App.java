@@ -107,9 +107,9 @@ public class App
         		SystemKey.MSDOS, 
         		ReleaseGroupType.VerbesserteOriginalversion);         
         
-        spielMonkeyIsland.addMajorRelease(vogDos);
-        spielMonkeyIsland.addMajorRelease(vogDosDemo);
-        spielMonkeyIsland.addMajorRelease(vogDosEnhanced);
+        spielMonkeyIsland.addReleaseGroup(vogDos);
+        spielMonkeyIsland.addReleaseGroup(vogDosDemo);
+        spielMonkeyIsland.addReleaseGroup(vogDosEnhanced);
 
         
         //########### Amiga
@@ -134,8 +134,8 @@ public class App
         		SystemKey.Amiga, 
         		ReleaseGroupType.Demoversion);
        
-        spielMonkeyIsland.addMajorRelease(vogAmiga);
-        spielMonkeyIsland.addMajorRelease(vogAmigaDemo);
+        spielMonkeyIsland.addReleaseGroup(vogAmiga);
+        spielMonkeyIsland.addReleaseGroup(vogAmigaDemo);
         
         
         
@@ -156,7 +156,7 @@ public class App
         vogAtariST.addRelease(voSt6_2);
         vogAtariST.addRelease(voSt6_3);
         
-        spielMonkeyIsland.addMajorRelease(vogAtariST);
+        spielMonkeyIsland.addReleaseGroup(vogAtariST);
 
         //########### Apple
         ReleaseGroup vogApple = new ReleaseGroup(
@@ -175,8 +175,8 @@ public class App
         		SystemKey.AppleMacintosh, 
         		ReleaseGroupType.Remake);
         
-        spielMonkeyIsland.addMajorRelease(vogApple);
-        spielMonkeyIsland.addMajorRelease(vogAppleSpecial);
+        spielMonkeyIsland.addReleaseGroup(vogApple);
+        spielMonkeyIsland.addReleaseGroup(vogAppleSpecial);
         
         
         
@@ -230,7 +230,7 @@ public class App
         vogPlaystation.addRelease(voPs1_3);
         //
         //
-        spielResidentEvil.addMajorRelease(vogPlaystation);
+        spielResidentEvil.addReleaseGroup(vogPlaystation);
         
         
         spielResidentEvil.addTitle(new Title("Resident Evil", LanguageKey.DE));

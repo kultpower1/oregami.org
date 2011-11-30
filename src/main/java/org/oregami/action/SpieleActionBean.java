@@ -7,12 +7,12 @@ import net.sourceforge.stripes.action.UrlBinding;
 
 import org.oregami.util.BaseActionBean;
 
-@UrlBinding("/Spiele")
+@UrlBinding("/games")
 public class SpieleActionBean extends BaseActionBean implements ActionBean {
 
 	public Resolution defaultHandler() {
 		
-		return new RedirectResolution("/Spiel");
+		return new RedirectResolution("/game");
 	}
 	
 }
