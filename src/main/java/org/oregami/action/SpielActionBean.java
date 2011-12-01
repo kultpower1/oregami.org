@@ -19,12 +19,7 @@ public class SpielActionBean extends BaseActionBean implements ActionBean {
 	
 	public Resolution defaultHandler() {
 		
-		loadedGame = SpielDAO.ladeSpiel(1);
-		if (loadedGame==null) {
-			App.initMonkeyIsland();
-			App.initResidentEvil();
-			App.initUser();
-		}
+		App.ensureDatabaseIsFilled();
 		
 		loadedGame = SpielDAO.ladeSpiel(Integer.parseInt(gameId));
 		System.out.println("Geladen: " + loadedGame.getMainTitle() + " (" + loadedGame.getDescription() + ")");

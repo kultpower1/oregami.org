@@ -256,4 +256,14 @@ public class App
 
         
     }
+    
+    public static void ensureDatabaseIsFilled() {
+		Game loadedGame = SpielDAO.ladeSpiel(1);
+		if (loadedGame==null) {
+			App.initMonkeyIsland();
+			App.initResidentEvil();
+			App.initUser();
+		}
+    }
+    
 }

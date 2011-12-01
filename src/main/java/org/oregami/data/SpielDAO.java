@@ -30,9 +30,9 @@ public class SpielDAO {
 		return s;
 	}
 	
-	public static List<Game> listeSpiele() {
+	public static List<Game> getAllGames() {
 		
-		List<Game> listeSpiele = new ArrayList<Game>();
+		List<Game> list = new ArrayList<Game>();
 		
 		EntityManagerFactory entityManagerFactory = HibernateJpaUtil.getEntityManagerFactory();
         
@@ -40,15 +40,17 @@ public class SpielDAO {
         EntityTransaction tx = entityManager.getTransaction();
         tx.begin();
         
-		Query query = entityManager.createQuery("SELECT s FROM Spiel s");
+		Query query = entityManager.createQuery("SELECT s FROM Game s");
 		List lst = query.getResultList();
 		Iterator it = lst.iterator();
 		while (it.hasNext()){
 			Game s = (Game) it.next();
-			System.out.print(" Name:"+s.getMainTitle());
+			list.add(s);
+			System.out.println(" Name:"+s.getMainTitle());
+			
 		}
 		
-		return listeSpiele;
+		return list;
 		
 	}
 }

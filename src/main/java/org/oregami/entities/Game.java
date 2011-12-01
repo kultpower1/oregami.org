@@ -27,7 +27,7 @@ public class Game extends BaseEntity {
 
 	@OneToMany(mappedBy = "game", cascade = CascadeType.ALL)
 	@OrderBy("name ASC")
-	private Set<Title> title = new HashSet<Title>();
+	private Set<Title> titleList = new HashSet<Title>();
 
 	
 	public void addReleaseGroup(ReleaseGroup vog) {
@@ -36,12 +36,12 @@ public class Game extends BaseEntity {
 	}
 
 	public void addTitle(Title t) {
-		this.title.add(t);
+		this.titleList.add(t);
 		t.setGame(this);
 	}
 
-	public Set<Title> getTitle() {
-		return title;
+	public Set<Title> getTitleList() {
+		return titleList;
 	}
 
 	public Set<ReleaseGroup> getReleaseGroupList() {
