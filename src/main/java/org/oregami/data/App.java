@@ -12,6 +12,7 @@ import org.oregami.entities.CountryRelease;
 import org.oregami.entities.Game;
 import org.oregami.entities.Release;
 import org.oregami.entities.ReleaseGroup;
+import org.oregami.entities.Screenshot;
 import org.oregami.entities.Title;
 import org.oregami.entities.User;
 import org.oregami.keyobjects.KeyObjects.CountryKey;
@@ -19,6 +20,7 @@ import org.oregami.keyobjects.KeyObjects.DistributionKey;
 import org.oregami.keyobjects.KeyObjects.LanguageKey;
 import org.oregami.keyobjects.KeyObjects.ReleaseGroupType;
 import org.oregami.keyobjects.KeyObjects.RoleKey;
+import org.oregami.keyobjects.KeyObjects.ScreenshotType;
 import org.oregami.keyobjects.KeyObjects.SystemKey;
 
 
@@ -89,9 +91,12 @@ public class App
         spielMonkeyIsland.setMainTitle("Monkey Island");
         spielMonkeyIsland.setDescription("Tolles Spiel mit viel Humor! (" + now() + ")");
         
+        spielMonkeyIsland.addScreenshot(new Screenshot("monkeyisland-03.gif", ScreenshotType.title, "Titelbild"));
+        spielMonkeyIsland.addScreenshot(new Screenshot("monkeyisland-01.gif", ScreenshotType.gameplayMiddleOfGame, "Mitten im Spiel"));
+        
 
         ReleaseGroup vogDos = new ReleaseGroup(
-        		"DOS (Original)", 
+        		"DOS", 
         		SystemKey.MSDOS, 
         		ReleaseGroupType.Original);
         Release voMsdos1_1 = new Release("Veröffentlichung 1-1 (PC, 5,25, DV, 256 Farben)", DistributionKey.RegularBox);
@@ -109,7 +114,7 @@ public class App
         
         
         ReleaseGroup vogDosDemo = new ReleaseGroup(
-        		"DOS (Demoversion)", 
+        		"DOS", 
         		SystemKey.MSDOS, 
         		ReleaseGroupType.Demo); 
         
@@ -125,7 +130,7 @@ public class App
         
         //########### Amiga
         ReleaseGroup vogAmiga = new ReleaseGroup(
-        		"Amiga 500/600 (OCS/ECS) (Original)",
+        		"Amiga 500/600 (OCS/ECS)",
         		SystemKey.Amiga, 
         		ReleaseGroupType.Original);
         
@@ -141,7 +146,7 @@ public class App
         vogAmiga.addRelease(voAmiga4_3);
         
         ReleaseGroup vogAmigaDemo = new ReleaseGroup(
-        		"Amiga 500/600 (OCS/ECS) (Demoversion)",
+        		"Amiga 500/600 (OCS/ECS)",
         		SystemKey.Amiga, 
         		ReleaseGroupType.Demo);
        
@@ -152,7 +157,7 @@ public class App
         
         //########### Atari ST
         ReleaseGroup vogAtariST = new ReleaseGroup(
-        		"Atari ST (Original)",
+        		"Atari ST",
         		SystemKey.AtariST, 
         		ReleaseGroupType.Original);
         
@@ -171,7 +176,7 @@ public class App
 
         //########### Apple
         ReleaseGroup vogApple = new ReleaseGroup(
-        		"Apple Macintosh (Original)",
+        		"Apple Macintosh",
         		SystemKey.AppleMacintosh, 
         		ReleaseGroupType.Original);
         
@@ -182,9 +187,9 @@ public class App
 
 
         ReleaseGroup vogAppleSpecial = new ReleaseGroup(
-        		"Apple Macintosh (Special Edition)",
+        		"Apple Macintosh",
         		SystemKey.AppleMacintosh, 
-        		ReleaseGroupType.Remake);
+        		ReleaseGroupType.Enhanced);
         
         spielMonkeyIsland.addReleaseGroup(vogApple);
         spielMonkeyIsland.addReleaseGroup(vogAppleSpecial);
@@ -223,7 +228,7 @@ public class App
         
 
         ReleaseGroup vogPlaystation = new ReleaseGroup(
-        		"Playstation Original", 
+        		"Playstation", 
         		SystemKey.SonyPlaystation, 
         		ReleaseGroupType.Original);
         

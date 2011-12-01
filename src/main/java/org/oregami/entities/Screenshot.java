@@ -1,6 +1,8 @@
 package org.oregami.entities;
 
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 import org.oregami.keyobjects.KeyObjects.ScreenshotType;
 
@@ -18,6 +20,9 @@ public class Screenshot extends BaseEntity {
 	private String description;
 
 	private ScreenshotType screenshotType;
+	
+	@ManyToOne
+	private Game game;
 	
 	public Screenshot() { };
 	
@@ -50,6 +55,14 @@ public class Screenshot extends BaseEntity {
 
 	public void setScreenshotType(ScreenshotType screenshotType) {
 		this.screenshotType = screenshotType;
+	}
+
+	public Game getGame() {
+		return game;
+	}
+
+	public void setGame(Game game) {
+		this.game = game;
 	}
 	
 	

@@ -23,7 +23,7 @@ public class GameActionBean extends BaseActionBean implements ActionBean {
 		
 		loadedGame = GameDAO.loadGameById(Integer.parseInt(gameId));
 		System.out.println("Geladen: " + loadedGame.getMainTitle() + " (" + loadedGame.getDescription() + ")");
-		return new ForwardResolution("/jsp/spiel.jsp");
+		return new ForwardResolution("/jsp/game.jsp");
 	}
 
 

@@ -1,12 +1,17 @@
 package org.oregami.entities;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.TreeMap;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 import javax.persistence.OrderBy;
+
+import org.oregami.keyobjects.KeyObjects.SystemKey;
 
 
 @Entity
@@ -23,11 +28,14 @@ public class Game extends BaseEntity {
 	
 	@OneToMany(mappedBy = "game", cascade = CascadeType.ALL)
 	@OrderBy("system ASC")
-	private Set<ReleaseGroup> releaseGroupList = new HashSet<ReleaseGroup>();
+	private Collection<ReleaseGroup> releaseGroupList = new ArrayList<ReleaseGroup>();
 
 	@OneToMany(mappedBy = "game", cascade = CascadeType.ALL)
 	@OrderBy("name ASC")
-	private Set<Title> titleList = new HashSet<Title>();
+	private Collection<Title> titleList = new ArrayList<Title>();
+
+	@OneToMany(mappedBy = "game", cascade = CascadeType.ALL)
+	private Collection<Screenshot> screenshotList = new ArrayList<Screenshot>();
 
 	
 	public void addReleaseGroup(ReleaseGroup vog) {
@@ -40,11 +48,11 @@ public class Game extends BaseEntity {
 		t.setGame(this);
 	}
 
-	public Set<Title> getTitleList() {
+	public Collection<Title> getTitleList() {
 		return titleList;
 	}
 
-	public Set<ReleaseGroup> getReleaseGroupList() {
+	public Collection<ReleaseGroup> getReleaseGroupList() {
 		return releaseGroupList;
 	}
 
@@ -62,6 +70,32 @@ public class Game extends BaseEntity {
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	public Collection<Screenshot> getScreenshotList() {
+		return screenshotList;
+	}
+
+	public void addScreenshot(Screenshot screenshot) {
+		this.screenshotList.add(screenshot);
+		screenshot.setGame(this);
+	}
+	
+	
+	public Map<SystemKey, Collection<ReleaseGroup>> getSystemToReleaseGroupMap() {
+		Map<SystemKey, Collection<ReleaseGroup>> map = new TreeMap<SystemKey, Collection<ReleaseGroup>>();
+		
+		Iterator<ReleaseGroup> rgIterator = getReleaseGroupList().iterator();
+		while (rgIterator.hasNext()) {
+			ReleaseGroup releaseGroup = (ReleaseGroup) rgIterator.next();
+			if (map.get(releaseGroup.getSystem())==null) {
+				map.put(releaseGroup.getSystem(), new ArrayList<ReleaseGroup>());
+			}
+			map.get(releaseGroup.getSystem()).add(releaseGroup);
+		}
+		
+		return map;
+		
 	}
 	
 }

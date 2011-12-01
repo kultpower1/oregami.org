@@ -12,15 +12,16 @@ td {
 
 .releaseGroup {
 	border-radius: 5px;
-	background-color:#f4f4ff;
-	margin-bottom: 10px;
-	padding: 3px;
+	/*background-color:#f4f4ff;*/
+	margin-bottom: 5px;
+	padding: 0px;
 	vertical-align: top;
 }
 
 table.release {
-	background-color:#eeeeee;
+	/*background-color:#eeeeee;*/
 	border: 0px dotted #555555;
+	padding-left: 5px;
 }
 
 table.release td{
@@ -35,5 +36,16 @@ table.release td{
 .game_subtitle {
 	font-size: 10pt; 
 	font-style: italic;
+	padding-left: 5px;
+}
+
+.rotateright {
+	-moz-transform:rotate(-270deg); 
+	-moz-transform-origin: bottom left;
+	-webkit-transform: rotate(-270deg);
+	-webkit-transform-origin: bottom left;
+	-o-transform: rotate(-270deg);
+	-o-transform-origin:  bottom left;
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
 }
 
