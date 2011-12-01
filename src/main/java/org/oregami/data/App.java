@@ -258,7 +258,7 @@ public class App
     }
     
     public static void ensureDatabaseIsFilled() {
-		Game loadedGame = SpielDAO.ladeSpiel(1);
+		Game loadedGame = GameDAO.loadGameById(1);
 		if (loadedGame==null) {
 			App.initMonkeyIsland();
 			App.initResidentEvil();

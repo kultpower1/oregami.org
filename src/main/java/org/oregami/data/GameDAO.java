@@ -12,10 +12,10 @@ import javax.persistence.Query;
 import org.oregami.entities.Game;
 
 
-public class SpielDAO {
+public class GameDAO {
 
 	
-	public static Game ladeSpiel(int id) {
+	public static Game loadGameById(int id) {
 		Game s = null;
 		
         EntityManagerFactory entityManagerFactory = HibernateJpaUtil.getEntityManagerFactory();

@@ -6,13 +6,13 @@ import net.sourceforge.stripes.action.Resolution;
 import net.sourceforge.stripes.action.UrlBinding;
 
 import org.oregami.data.App;
-import org.oregami.data.SpielDAO;
+import org.oregami.data.GameDAO;
 import org.oregami.entities.Game;
 import org.oregami.util.BaseActionBean;
 
 
 @UrlBinding("/game/{gameId=2}")
-public class SpielActionBean extends BaseActionBean implements ActionBean {
+public class GameActionBean extends BaseActionBean implements ActionBean {
 
 	private Game loadedGame = null;
 	private String gameId;
@@ -21,7 +21,7 @@ public class SpielActionBean extends BaseActionBean implements ActionBean {
 		
 		App.ensureDatabaseIsFilled();
 		
-		loadedGame = SpielDAO.ladeSpiel(Integer.parseInt(gameId));
+		loadedGame = GameDAO.loadGameById(Integer.parseInt(gameId));
 		System.out.println("Geladen: " + loadedGame.getMainTitle() + " (" + loadedGame.getDescription() + ")");
 		return new ForwardResolution("/jsp/spiel.jsp");
 	}
