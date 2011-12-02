@@ -152,7 +152,7 @@ $(document).ready(function() {
 </tr>
 <tr>
 <td valign="top">
-
+<!-- 
 	<span class="screenshots">Screenshots: <br/>
 		<c:forEach
 			items="${actionBean.loadedGame.screenshotList}" var="screenshot"
@@ -161,7 +161,7 @@ $(document).ready(function() {
 				title="${screenshot.description}" />
 		</c:forEach>
 	</span>
-
+ -->
 </td>
 </tr>
 </table>
