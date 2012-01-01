@@ -84,7 +84,7 @@ $(document).ready(function() {
 <tr>
 <td valign="top">
 
-	<span class="screenshots">Screenshots: <br/>
+	<span class="screenshots">Screenshots 2: <br/>
 		<c:forEach
 			items="${actionBean.loadedGame.screenshotList}" var="screenshot"
 			varStatus="status">
