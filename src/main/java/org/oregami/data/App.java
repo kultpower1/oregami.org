@@ -93,6 +93,7 @@ public class App
         
         spielMonkeyIsland.addScreenshot(new Screenshot("monkeyisland-03.gif", ScreenshotType.title, "Titelbild"));
         spielMonkeyIsland.addScreenshot(new Screenshot("monkeyisland-01.gif", ScreenshotType.gameplayMiddleOfGame, "Mitten im Spiel"));
+        spielMonkeyIsland.addScreenshot(new Screenshot("monkeyisland-02.gif", ScreenshotType.gameplayMiddleOfGame, "Mitten im Spiel"));
         
 
         ReleaseGroup vogDos = new ReleaseGroup(
