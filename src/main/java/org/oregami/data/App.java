@@ -8,24 +8,8 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 
-import org.oregami.entities.CountryRelease;
-import org.oregami.entities.Game;
-import org.oregami.entities.Release;
-import org.oregami.entities.ReleaseGroup;
-import org.oregami.entities.Screenshot;
-import org.oregami.entities.Title;
 import org.oregami.entities.User;
-import org.oregami.keyobjects.KeyObjects.CountryKey;
-import org.oregami.keyobjects.KeyObjects.DistributionKey;
-import org.oregami.keyobjects.KeyObjects.LanguageKey;
-import org.oregami.keyobjects.KeyObjects.ReleaseGroupType;
 import org.oregami.keyobjects.KeyObjects.RoleKey;
-import org.oregami.keyobjects.KeyObjects.ScreenshotType;
-import org.oregami.keyobjects.KeyObjects.SystemKey;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.thoughtworks.xstream.XStream;
 
 
 /**
