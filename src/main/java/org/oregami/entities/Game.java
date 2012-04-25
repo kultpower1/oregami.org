@@ -12,10 +12,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.OrderBy;
 
-import org.hibernate.annotations.Cascade;
 import org.oregami.keyobjects.KeyObjects.SystemKey;
-
-import com.google.gson.annotations.Expose;
 
 
 @Entity
@@ -26,7 +23,6 @@ public class Game extends BaseEntity implements WebGui {
 	 */
 	private static final long serialVersionUID = -2362683596950421365L;
 	
-	@Expose
 	private String mainTitle;
 	
 	private String description;
