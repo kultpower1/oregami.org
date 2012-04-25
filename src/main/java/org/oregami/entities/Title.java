@@ -11,6 +11,8 @@ import org.oregami.keyobjects.KeyObjects.LanguageKey;
 @Entity
 public class Title extends BaseEntity {
 
+	private static final long serialVersionUID = 1L;
+
 	public Title () {
 	}
 

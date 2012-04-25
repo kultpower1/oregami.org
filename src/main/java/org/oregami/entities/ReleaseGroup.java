@@ -1,5 +1,7 @@
 package org.oregami.entities;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -7,17 +9,19 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OrderBy;
 
-import org.oregami.keyobjects.KeyObjects.SystemKey;
 import org.oregami.keyobjects.KeyObjects.ReleaseGroupType;
+import org.oregami.keyobjects.KeyObjects.SystemKey;
 
 
 @Entity
-public class ReleaseGroup extends BaseEntity {
+public class ReleaseGroup extends BaseEntity implements WebGui {
 
+	private static final long serialVersionUID = 1L;
 
 	@Enumerated(EnumType.STRING)
 	private SystemKey system;
@@ -27,12 +31,15 @@ public class ReleaseGroup extends BaseEntity {
 	
 	private String name;
 	
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.ALL)
 	private Game game;
 
-	@OneToMany(mappedBy = "releaseGroup", cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "releaseGroup", cascade = CascadeType.ALL, orphanRemoval=true)
 	@OrderBy("description ASC")
 	private Set<Release> releaseList = new HashSet<Release>();
+
+	@OneToMany(cascade = CascadeType.ALL, orphanRemoval=true)
+	private Collection<Screenshot> screenshotList = new ArrayList<Screenshot>();
 
 	
 	public ReleaseGroup() {
@@ -68,6 +75,42 @@ public class ReleaseGroup extends BaseEntity {
 
 	public Set<Release> getReleaseList() {
 		return releaseList;
+	}
+
+	@Override
+	public String toWebString() {
+		String ret = "";
+		
+		ret += "<li>" + this.getSystem().toString() + " (" + this.getReleaseGroupType().toString() + ")\n";
+		
+		ret += "<ul>\n";
+		ret += "<li class='folder'>Releases (" + getReleaseList().size() + ")\n"
+				;
+		Set<Release> releaseList = this.getReleaseList();
+		ret += "<ul>\n";
+		for (Release release : releaseList) {
+			ret += release.toWebString();
+		}
+		ret += "</ul>\n";
+		ret += "</li>";
+		ret += "</ul>";
+		
+		ret += "</li>\n";
+		
+		return ret;
+	}
+
+	public Collection<Screenshot> getScreenshotList() {
+	    return screenshotList;
+	}
+
+	public void setScreenshotList(Collection<Screenshot> param) {
+	    this.screenshotList = param;
+	}
+	
+	public void addScreenshot(Screenshot screenshot) {
+		this.screenshotList.add(screenshot);
+		//screenshot.set(this);
 	}
 	
 }

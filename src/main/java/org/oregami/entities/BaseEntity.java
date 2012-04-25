@@ -76,8 +76,8 @@ public abstract class BaseEntity implements Serializable
         return this.id;
     }
  
-    @SuppressWarnings("unused")
-    private void setId(final Long id)
+    @Deprecated
+    public void setId(final Long id)
     {
         this.id = id;
     }

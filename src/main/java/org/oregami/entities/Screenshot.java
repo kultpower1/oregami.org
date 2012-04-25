@@ -2,13 +2,12 @@ package org.oregami.entities;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 
 import org.oregami.keyobjects.KeyObjects.ScreenshotType;
 
 
 @Entity
-public class Screenshot extends BaseEntity {
+public class Screenshot extends BaseEntity implements WebGui {
 
 	/**
 	 * 
@@ -63,6 +62,15 @@ public class Screenshot extends BaseEntity {
 
 	public void setGame(Game game) {
 		this.game = game;
+	}
+
+	@Override
+	public String toWebString() {
+		String ret = "";
+		
+		ret += "<li data=\"pic: 'images/screenshots/" + this.getFileName()  + "'\">" + this.getFileName() + " (" + this.getScreenshotType() + ")</li>\n";
+		
+		return ret;
 	}
 	
 	

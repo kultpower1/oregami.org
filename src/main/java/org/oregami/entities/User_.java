@@ -7,7 +7,7 @@ import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
 import org.oregami.keyobjects.KeyObjects.RoleKey;
 
-@Generated(value="Dali", date="2011-11-30T13:59:24.471+0100")
+@Generated(value="Dali", date="2012-04-02T22:11:44.711+0200")
 @StaticMetamodel(User.class)
 public class User_ extends BaseEntity_ {
 	public static volatile SingularAttribute<User, String> email;

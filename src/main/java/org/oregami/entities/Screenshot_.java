@@ -5,7 +5,7 @@ import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
 import org.oregami.keyobjects.KeyObjects.ScreenshotType;
 
-@Generated(value="Dali", date="2011-12-02T22:54:55.361+0100")
+@Generated(value="Dali", date="2012-04-02T22:11:44.691+0200")
 @StaticMetamodel(Screenshot.class)
 public class Screenshot_ extends BaseEntity_ {
 	public static volatile SingularAttribute<Screenshot, String> fileName;

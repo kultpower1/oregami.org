@@ -5,7 +5,7 @@ import javax.persistence.metamodel.CollectionAttribute;
 import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
 
-@Generated(value="Dali", date="2011-12-01T13:09:15.821+0100")
+@Generated(value="Dali", date="2012-04-11T22:05:14.124+0200")
 @StaticMetamodel(Game.class)
 public class Game_ extends BaseEntity_ {
 	public static volatile SingularAttribute<Game, String> mainTitle;

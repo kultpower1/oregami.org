@@ -18,7 +18,9 @@ public class KeyObjects {
 	
 	public enum RoleKey {Admin, User};
 	
-	public enum ScreenshotType {title, intro, outro, companylogo, gameplayBeginningOfGame, gameplayMiddleOfGame, gameplayEndOfGame};
+	public enum ScreenshotType {unknown, title, intro, outro, companylogo, gameplayBeginningOfGame, gameplayMiddleOfGame, gameplayEndOfGame};
+	
+	public enum PhotoType {unknown, BoxFront, BoxBack, CompactDisc, Disc, Poster, Goodie};
 	
  
 }
