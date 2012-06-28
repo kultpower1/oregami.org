@@ -1,4 +1,4 @@
-oregami.org
+oregami.org - open register of game information
 ===========
 
 open source database for computer and video game information
